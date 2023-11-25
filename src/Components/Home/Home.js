@@ -24,9 +24,12 @@ function Home() {
       const url = "http://localhost:5000/";
       const options = {
         method: "get",
+        headers: {
+          "Access-Control-Request-Private-Network": "true",
+        },
       };
       try {
-        const res = await fetch(url, options, { mode: "cors" });
+        const res = await fetch(url, options);
         if (res.ok) {
           const resdata = await res.json();
           setStatus((prev) => ({
