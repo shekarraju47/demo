@@ -1,11 +1,12 @@
-import React from "react";
+import { Link, withRouter } from "react-router-dom";
 
 function Header() {
   return (
     <div>
-      <h1>Header</h1>
+      <Link to="/">Home</Link>
+      <Link to="/signup">Sign Up</Link>
     </div>
   );
 }
 
-export default Header;
+export default withRouter(Header);

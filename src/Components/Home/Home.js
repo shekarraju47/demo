@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const apiConstrant = {
+export const apiConstrant = {
   initial: "INITIAL",
   loading: "LOADING",
   success: "SUCCSESS",
@@ -35,7 +35,6 @@ function Home() {
             api: apiConstrant.success,
           }));
           setData(resdata);
-          console.log(resdata);
         } else {
           setStatus((prev) => ({
             ...prev,
@@ -43,7 +42,6 @@ function Home() {
             error: true,
             errorMsg: "Something Wrong",
           }));
-          console.log("error");
         }
       } catch (e) {
         setStatus((prev) => ({
@@ -52,7 +50,6 @@ function Home() {
           error: true,
           errorMsg: e.message,
         }));
-        console.log(e.message);
       }
     };
     getData();
@@ -96,7 +93,7 @@ function Home() {
 
   return (
     <div>
-      <h1>Home</h1>
+      <h1 className="text-danger">Home</h1>
       {getResult()}
     </div>
   );
