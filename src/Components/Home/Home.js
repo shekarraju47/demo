@@ -21,7 +21,7 @@ function Home() {
         ...prev,
         api: apiConstrant.loading,
       }));
-      const url = "http://localhost:500/";
+      const url = "http://localhost:5000/";
       const options = {
         method: "get",
       };
