@@ -25,11 +25,12 @@ function Home() {
       const options = {
         method: "get",
         headers: {
-          "Access-Control-Request-Private-Network": "true",
+          "Access-Control-Request-Private-Network": true,
         },
       };
       try {
-        const res = await fetch(url, options);
+        const res = await fetch(url, options, { mode: "cors" });
+        console.log(res);
         if (res.ok) {
           const resdata = await res.json();
           setStatus((prev) => ({
@@ -52,8 +53,9 @@ function Home() {
           ...prev,
           api: apiConstrant.failure,
           error: true,
-          errorMsg: "Error",
+          errorMsg: e.message,
         }));
+        console.log(e.message);
       }
     };
     getData();
