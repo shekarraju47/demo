@@ -24,9 +24,6 @@ function Home() {
       const url = "https://emerald-lamb-tux.cyclic.app/";
       const options = {
         method: "get",
-        headers: {
-          "Access-Control-Request-Private-Network": true,
-        },
       };
       try {
         const res = await fetch(url, options, { mode: "cors" });
