@@ -59,14 +59,22 @@ function Home() {
     getData();
   }, []);
 
-  console.log(apiStatus);
-
   const Loading = () => {
     return <h1>Loading...</h1>;
   };
 
   const Success = () => {
-    return <h1>SuccessFull</h1>;
+    return (
+      <div>
+        <ul>
+          {data.map((item) => (
+            <li key={item._id}>
+              <p>{item.name}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
   };
 
   const Failure = () => {
@@ -75,7 +83,6 @@ function Home() {
 
   const getResult = () => {
     const { api } = apiStatus;
-    console.log(api);
     switch (api) {
       case apiConstrant.loading:
         return Loading();
