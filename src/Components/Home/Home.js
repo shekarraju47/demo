@@ -23,10 +23,10 @@ function Home() {
       }));
       const url = "https://emerald-lamb-tux.cyclic.app/";
       const options = {
-        method: "get",
+        method: "GET",
       };
       try {
-        const res = await fetch(url, options, { mode: "cors" });
+        const res = await fetch(url, options);
         console.log(res);
         if (res.ok) {
           const resdata = await res.json();
