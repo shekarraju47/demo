@@ -26,7 +26,7 @@ function Home() {
         method: "get",
       };
       try {
-        const res = await fetch(url, options);
+        const res = await fetch(url, options, { mode: "cors" });
         if (res.ok) {
           const resdata = await res.json();
           setStatus((prev) => ({
