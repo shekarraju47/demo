@@ -21,7 +21,7 @@ function Home() {
         ...prev,
         api: apiConstrant.loading,
       }));
-      const url = "http://localhost:5000/";
+      const url = "https://emerald-lamb-tux.cyclic.app/";
       const options = {
         method: "get",
         headers: {
