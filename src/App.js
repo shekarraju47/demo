@@ -5,7 +5,7 @@ import Header from "./Components/Header/Header";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/demo">
       <Header />
       <Switch>
         <Route exact path="/" component={Home} />
