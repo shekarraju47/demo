@@ -9,7 +9,7 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/signup" component={Form} />
+        <Route exact path="/signup/" component={Form} />
       </Switch>
     </BrowserRouter>
   );
