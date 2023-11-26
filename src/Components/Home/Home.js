@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./index.css";
 
 export const apiConstrant = {
   initial: "INITIAL",
@@ -21,7 +22,7 @@ function Home() {
         ...prev,
         api: apiConstrant.loading,
       }));
-      const url = "https://emerald-lamb-tux.cyclic.app/";
+      const url = "http://localhost:5000";
       const options = {
         method: "GET",
       };
@@ -61,7 +62,7 @@ function Home() {
 
   const Success = () => {
     return (
-      <div>
+      <div className="home-main-cont">
         <ul>
           {data.map((item) => (
             <li key={item._id}>
