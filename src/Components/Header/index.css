@@ -2,14 +2,13 @@
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  background-color: slategrey;
   padding: 4px;
+  width: 100%;
 }
 
 .link {
   border: none;
-  background-color: inherit;
-  color: #ffffff;
   text-decoration: none;
   margin: 2px;
+  font-weight: bold;
 }
